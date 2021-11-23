@@ -39,9 +39,8 @@ create table if not exists Collection (
 	collection_year integer not null
 );
 
-create table if not exists CollectionTrackAlbum (
+create table if not exists CollectionTrack (
 	id serial primary key,
 	collection_id integer not null references Collection(id),
-	album_id integer not null references Album(id),
 	track_id integer not null references Track(id)
 );
